@@ -40,7 +40,7 @@ select {
     padding-right: 40px;
     padding-left: 12px;
     background-color: #F3F3F3;
-    background-image: url('../img/arrow 12x12.svg');
+    background-image: url('../img/12x12/dropdown.svg');
     background-repeat: no-repeat;
     background-position: calc(100% - 14px) center;
     background-size: 12px;
