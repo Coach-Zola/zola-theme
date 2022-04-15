@@ -8,12 +8,14 @@ button {
     padding: 13px;
 }
 
+
+
 .primary {
     background: #776BFF;
     color: #FEFDFF;
 }
 
-.secondary {
+.secondary{
     background-color: #F3F3F3;
     color: #383838;
 }
