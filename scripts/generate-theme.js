@@ -14,7 +14,7 @@ fs.readdirSync(SRC_FOLDER).forEach(folder => {
         let is24 = subFolder.split(SPLIT)[0].replace("24=", "") == "True";
         fs.readdirSync(SRC_FOLDER + SEPARATOR + folder + SEPARATOR + subFolder).forEach(file => {
             let isGrey = file.split(SPLIT)[0].replace("Grey=", "").replace(".svg", "") == "True";
-            let dest_fname = "icons" + SEPARATOR + (is24 ? "24x24":"12x12") + SEPARATOR + (isGrey ? "grey":"white") + SEPARATOR + name + ".svg";
+            let dest_fname = "icons" + SEPARATOR + (is24 ? "24x24":"12x12") + SEPARATOR + (isGrey ? "dark":"white") + SEPARATOR + name + ".svg";
             fs.copyFileSync(SRC_FOLDER + SEPARATOR + folder + SEPARATOR + subFolder + SEPARATOR + file, dest_fname);
         });
     });
