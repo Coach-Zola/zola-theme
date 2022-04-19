@@ -40,7 +40,7 @@ select {
     padding-right: 40px;
     padding-left: 12px;
     background-color: var(--xlight);
-    background-image: url('../img/12x12/dark/dropdown.svg');
+    background-image: url('../icons/12x12/dark/dropdown.svg');
     background-repeat: no-repeat;
     background-position: calc(100% - 14px) center;
     background-size: 12px;
@@ -61,7 +61,7 @@ option {
 /*    color:#383838 ;*/
 /*}*/
 textarea {
-    background: var(--white);
+    background: var(--xlight);
     border-radius: 4px;
     padding: 8px 12px;
     resize: none;
