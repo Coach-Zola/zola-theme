@@ -1,3 +1,5 @@
+@import url("colors.css");
+
 button {
     height: 40px;
     border-radius: 4px;
@@ -8,14 +10,12 @@ button {
     padding: 13px;
 }
 
-
-
 .primary {
-    background: #776BFF;
-    color: #FEFDFF;
+    background: var(--primary);
+    color: var(--white);
 }
 
 .secondary{
-    background-color: #F3F3F3;
-    color: #383838;
+    background-color: var(--white);
+    color: var(--xdark);
 }
