@@ -21,12 +21,12 @@ h3 {
     max-width: 800px;
 }
 
-#color-list {
+.color-list {
     display: flex;
     flex-direction: row;
 }
 
-#color-list:not(:last-of-type) {
+.color-list:not(:last-of-type) {
     margin-bottom: 8px;
 }
 
