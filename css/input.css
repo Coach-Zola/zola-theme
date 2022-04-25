@@ -31,7 +31,7 @@ input[type="text"]:focus::placeholder, textarea:focus::placeholder {
 
 }
 
-select {
+select, .multiselect {
     min-height: 40px;
     font-size: 12px;
     -moz-appearance: none; /* Firefox */
@@ -49,8 +49,10 @@ select {
     color: var(--dark);
 }
 
-option {
+
+option, .multioption{
     background: var(--white);
+
     box-shadow: 4px 8px 28px rgba(119, 107, 255, 0.15);
     font-size: 12px;
     line-height: 15px;
