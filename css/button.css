@@ -1,5 +1,7 @@
+@import url("color.css");
+
 button {
-    height:40px;
+    height: 40px;
     border-radius: 4px;
     border-color: rgba(255, 0, 0, 0);
     font-weight: 700;
@@ -7,11 +9,13 @@ button {
     line-height: 15px;
     padding: 13px;
 }
+
 .primary {
-    background: #776BFF;
-    color: #FEFDFF;
+    background: var(--primary);
+    color: var(--white);
 }
+
 .secondary{
-    background-color: #F3F3F3;
-    color: #383838;
+    background-color: var(--white);
+    color: var(--xdark);
 }
