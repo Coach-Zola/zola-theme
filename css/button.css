@@ -16,6 +16,6 @@ button {
 }
 
 .secondary{
-    background-color: var(--white);
+    background-color: var(--secondary);
     color: var(--xdark);
 }
