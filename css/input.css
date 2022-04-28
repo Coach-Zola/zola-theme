@@ -32,7 +32,7 @@ input[type="text"]:focus::placeholder, textarea:focus::placeholder {
 }
 
 select, .multiselect {
-    min-height: 40px;
+    max-height: 40px;
     font-size: 12px;
     -moz-appearance: none; /* Firefox */
     -webkit-appearance: none; /* Safari and Chrome */
