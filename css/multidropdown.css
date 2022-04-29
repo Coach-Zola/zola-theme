@@ -159,7 +159,7 @@
     line-height: 1em;
     align-items: center;
     width: 100%;
-    color: #dedede;
+    color: var(--grey);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
@@ -300,7 +300,7 @@
 }
 
 .ss-content .ss-search input::placeholder {
-    color: #8a8a8a;
+    color: var(--dark);
     vertical-align: middle
 }
 
@@ -375,7 +375,7 @@
 
 .ss-content .ss-list .ss-option:not(.ss-disabled).ss-option-selected {
     color: var(--dark);
-    background-color: rgba(88, 151, 251, .1)
+    background-color:var(--grey)
 }
 
 .ss-content .ss-list .ss-option.ss-hide {
