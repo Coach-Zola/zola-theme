@@ -3,6 +3,7 @@
 @import url("input.css");
 @import url("button.css");
 @import url("text.css");
+@import url("multidropdown.css");
 
 body {
     font-family: Montserrat, serif;
