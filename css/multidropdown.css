@@ -17,7 +17,7 @@
     padding: 6px;
     border: 1px solid var(--light);
     border-radius: 4px;
-    background-color: var(--white);
+    background-color: var(--xlight);
     outline: 0;
     box-sizing: border-box;
     transition: background-color .2s
