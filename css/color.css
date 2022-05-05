@@ -1,6 +1,9 @@
 :root {
     --primary: #776BFF;
     --secondary: #DCEDFF;
+    --shadow5: rgba(119, 107, 255, 0.05);
+    --shadow10: rgba(119, 107, 255, 0.10);
+    --shadow15: rgba(119, 107, 255, 0.15);
 
     --white: #FEFDFF;
     --black: #070214;
