@@ -187,6 +187,6 @@
     display: none;
 }
 
-.ss-single-selected + .ss-content .ss-list .ss-disabled:not(.ss-option-selected) {
+.ss-single-selected + .ss-content .ss-list .ss-disabled:first-child {
     display: none;
 }
