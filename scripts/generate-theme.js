@@ -10,13 +10,20 @@ const SEPARATOR = '/';
 
 colors = [
     ["danger", "#ED1C24"],
+    ["warn", "#FF931E"],
+    ["success", "#22B573"],
+    ["alernative", "#58DBCB"],
+
     ["white", "#FEFDFF"],
     ["black", "#070214"],
+
     ["xdark", "#383838"],
     ["dark", "#7B797D"],
     ["grey", "#CECECE"],
     ["light", "#EAEAEA"],
-    ["xlight", "#F3F3F3"]
+    ["xlight", "#F3F3F3"],
+
+    ["primary", "#776BFF"]
 ]
 
 fs.readdirSync(SRC_FOLDER).forEach(folder => {
