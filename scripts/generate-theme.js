@@ -44,7 +44,7 @@ fs.readdirSync(SRC_FOLDER).forEach(folder => {
                         fs.mkdirSync(dest_dir);
                     } catch(err) {}
                     let data = fs.readFileSync(src_name, 'utf8');
-                    let result = data.replace("#FEFDFF", color[1]);
+                    let result = data.replace(/#FEFDFF/g, color[1]); // /*/g works as replaceAll
                     fs.writeFileSync(dest_fname, result, 'utf8');
                 });
             }
