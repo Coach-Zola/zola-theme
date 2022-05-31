@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.27.1/slimselect.min.js"></script>
+    <script src="index.js"></script>
     <link rel="stylesheet" href="css/global.css" type="text/css">
     <link rel="stylesheet" href="index.css" type="text/css">
 </head>
@@ -82,7 +84,7 @@
     </div>
     <div id="colors">
         <h3>Colors</h3>
-        <div id="color-list">
+        <div class="color-list">
             <div class="color bg-white brd1-black"></div>
             <div class="color bg-black"></div>
             <div class="color"></div>
@@ -92,7 +94,7 @@
             <div class="color bg-light"></div>
             <div class="color bg-xlight"></div>
         </div>
-        <div id="color-list">
+        <div class="color-list">
             <div class="color bg-primary"></div>
             <div class="color bg-secondary"></div>
             <div class="color"></div>
@@ -101,7 +103,7 @@
             <div class="color bg-success"></div>
             <div class="color bg-alternative"></div>
         </div>
-        <div id="color-list">
+        <div class="color-list">
             <div class="color bg-tag-text-red"></div>
             <div class="color bg-tag-text-yellow"></div>
             <div class="color bg-tag-text-turquoise"></div>
@@ -109,7 +111,7 @@
             <div class="color bg-tag-text-purple"></div>
             <div class="color bg-tag-text-green"></div>
         </div>
-        <div id="color-list">
+        <div class="color-list">
             <div class="color bg-tag-red"></div>
             <div class="color bg-tag-yellow"></div>
             <div class="color bg-tag-turquoise"></div>
@@ -119,6 +121,27 @@
         </div>
     </div>
     <div>
-        <input type="text" placeholder="Placeholder">
+        <h3>Inputs</h3>
+        <div class="input-list">
+            <input type="text" placeholder="Input">
+            <select required>
+                <option value disabled selected hidden>Dropdown</option>
+                <option>Option A</option>
+                <option>Option B</option>
+                <option>Option C</option>
+            </select>
+            <select id="multidropdown" multiple>
+                <option>Large Option A</option>
+                <option>Large Option B</option>
+                <option>Large Option C</option>
+            </select>
+            <select id="multidropdown2">
+                <option value disabled selected hidden>Multidropdown</option>
+                <option>Large Option A</option>
+                <option>Large Option B</option>
+                <option>Large Option C</option>
+            </select>
+            <textarea placeholder="TextArea"></textarea>
+        </div>
     </div>
 </body>
