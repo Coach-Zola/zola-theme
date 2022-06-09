@@ -19,6 +19,9 @@
 
     background-color: var(--xlight);
     border: 1px solid var(--xlight);
+    background-image: url('../icons/12x12/dark/dropdown.svg');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 12px) center;
     border-radius: 4px;
     outline: 0;
 
