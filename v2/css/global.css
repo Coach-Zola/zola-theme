@@ -1,0 +1,13 @@
+@import url("font.css");
+@import url("color.css");
+@import url("input.css");
+@import url("button.css");
+@import url("text.css");
+@import url("multidropdown.css");
+
+body {
+    font-family: 'Montserrat', serif;
+    background: var(--white);
+    color: var(--xdark);
+}
+

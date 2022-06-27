@@ -1,0 +1,72 @@
+@import url("color.css");
+@import url("font.css");
+
+input, textarea, select {
+    font-family: 'Montserrat', serif;
+    font-weight: 600;
+    font-size: 12px;
+
+    background: var(--xlight);
+
+    min-height: 30px;
+    max-height: 30px;
+    padding: 4px 12px;
+    border: solid 1px var(--xlight);
+    border-radius: 4px;
+
+    outline: none !important;
+}
+
+select, .multiselect {
+    -moz-appearance: none; /* Firefox */
+    -webkit-appearance: none; /* Safari and Chrome */
+    appearance: none;
+
+    min-height: 40px;
+    max-height: 40px;
+
+    background-color: var(--xlight);
+    background-image: url('../icons/12x12/dark/dropdown.svg');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 12px) center;
+    background-size: 12px;
+
+    color: var(--black);
+}
+
+select:invalid {
+    color: var(--dark);
+}
+
+input:hover, textarea:hover, input[type="url"]:hover, input[type="number"]:hover, select:hover {
+    border: 1px solid var(--grey);
+}
+
+input:focus, textarea:focus, input[type="url"]:focus, input[type="number"]:focus, select:focus {
+    border: 1px solid var(--primary);
+    color: var(--xdark);
+}
+
+input:focus::placeholder, textarea:focus::placeholder {
+    color: var(--grey);
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+}
+
+option, .multioption{
+    background: var(--white);
+
+    box-shadow: 4px 8px 28px var(--shadow15);
+    font-size: 12px;
+    color: var(--dark);
+}
+
+textarea {
+    padding: 11px 12px;
+    resize: none;
+    min-height: 16px;
+    max-height: none;
+    height: 100%;
+}
