@@ -26,7 +26,7 @@ select, .multiselect {
     max-height: 40px;
 
     background-color: var(--xlight);
-    background-image: url('../icons/12x12/dark/dropdown.svg');
+    background-image: url('../icons/24x24/dark/dropdown.svg');
     background-repeat: no-repeat;
     background-position: calc(100% - 12px) center;
     background-size: 12px;

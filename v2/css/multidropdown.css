@@ -19,9 +19,10 @@
 
     background-color: var(--xlight);
     border: 1px solid var(--xlight);
-    background-image: url('../icons/12x12/dark/dropdown.svg');
+    background-image: url('../icons/24x24/dark/dropdown.svg');
     background-repeat: no-repeat;
     background-position: calc(100% - 12px) center;
+    background-size: 12px;
     border-radius: 4px;
     outline: 0;
 
@@ -101,7 +102,8 @@
 }
 
 .ss-value-delete {
-    content: url(../icons/12x12/dark/notdone.svg);
+    content: url(../icons/24x24/dark/cross.svg);
+    width: 12px;
 }
 
 .ss-content {
@@ -183,7 +185,14 @@
 }
 
 .ss-option.ss-option-selected::after {
-    content: url(../icons/12x12/dark/check.svg);
+    content: "";
+    background-image: url(../icons/24x24/dark/check.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 12px 12px;
+    width: 12px;
+    height: 12px;
+    display: block;
 }
 
 .ss-option.ss-hide {
