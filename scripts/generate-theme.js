@@ -30,24 +30,25 @@ fs.readdirSync(SRC_FOLDER).forEach(folder => {
     let name = folder.split(SPLIT)[0].replace("Icon=", "").toLowerCase();
     fs.readdirSync(SRC_FOLDER + SEPARATOR + folder).forEach(subFolder => {
         let is24 = subFolder.split(SPLIT)[0].replace("24=", "") == "True";
-        fs.readdirSync(SRC_FOLDER + SEPARATOR + folder + SEPARATOR + subFolder).forEach(file => {
-            let isGrey = file.split(SPLIT)[0].replace("Grey=", "").replace(".svg", "") == "True";
-
-            let src_name = SRC_FOLDER + SEPARATOR + folder + SEPARATOR + subFolder + SEPARATOR + file;
-            
-            if (!isGrey) {
-                colors.forEach(color => {
-                    let dest_dir = "icons" + SEPARATOR + (is24 ? "24x24":"12x12") + SEPARATOR + color[0];
-                    let dest_fname = dest_dir + SEPARATOR + name + ".svg";
-                   
-                    try {
-                        fs.mkdirSync(dest_dir);
-                    } catch(err) {}
-                    let data = fs.readFileSync(src_name, 'utf8');
-                    let result = data.replace(/#FEFDFF/g, color[1]); // /*/g works as replaceAll
-                    fs.writeFileSync(dest_fname, result, 'utf8');
-                });
-            }
-        });
+        if(!!is24) {
+            fs.readdirSync(SRC_FOLDER + SEPARATOR + folder + SEPARATOR + subFolder).forEach(file => {
+                let isGrey = file.split(SPLIT)[0].replace("Grey=", "").replace(".svg", "") == "True";
+                if (isGrey) {
+                    console.log("<img src=\"v2/icons/24x24/dark/"+name+".svg\"/>");
+                    let src_name = SRC_FOLDER + SEPARATOR + folder + SEPARATOR + subFolder + SEPARATOR + file;
+                    colors.forEach(color => {
+                        let dest_dir = "v2/icons" + SEPARATOR + (is24 ? "24x24":"12x12") + SEPARATOR + color[0];
+                        let dest_fname = dest_dir + SEPARATOR + name + ".svg";
+                       
+                        try {
+                            fs.mkdirSync(dest_dir);
+                        } catch(err) {}
+                        let data = fs.readFileSync(src_name, 'utf8');
+                        let result = data.replace(/#7B797D/g, color[1]); // /*/g works as replaceAll
+                        fs.writeFileSync(dest_fname, result, 'utf8');
+                    });
+                }
+            });
+        }
     });
 });
