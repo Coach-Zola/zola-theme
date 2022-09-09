@@ -39,7 +39,7 @@ fs.readdirSync(SRC_FOLDER).forEach(folder => {
         let is24 = subFolder.split(SPLIT)[0].replace("24=", "") == "True";
         if(!!is24) {
             fs.readdirSync(SRC_FOLDER + SEPARATOR + folder + SEPARATOR + subFolder).forEach(file => {
-                let isGrey = file.split(SPLIT)[0].replace("Grey=", "").replace(".svg", "") == "True";
+                let isGrey = file.split(SPLIT)[0].replace("Grey=", "").replace(".svg", "")?.toLowerCase() == "true";
                 if (isGrey) {
                     console.log("<img src=\"v2/icons/24x24/dark/"+name+".svg\"/>");
                     let src_name = SRC_FOLDER + SEPARATOR + folder + SEPARATOR + subFolder + SEPARATOR + file;
