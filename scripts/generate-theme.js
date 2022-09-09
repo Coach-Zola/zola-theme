@@ -23,7 +23,14 @@ colors = [
     ["light", "#EAEAEA"],
     ["xlight", "#F3F3F3"],
 
-    ["primary", "#776BFF"]
+    ["primary", "#776BFF"],
+
+    ["tag-red", "#C00748"],
+    ["tag-yellow", "#936600"],
+    ["tag-turquoise", "#00C590"],
+    ["tag-blue", "#1192B2"],
+    ["tag-purple", "#521BAF"],
+    ["tag-green", "#579F00"]
 ]
 
 fs.readdirSync(SRC_FOLDER).forEach(folder => {
