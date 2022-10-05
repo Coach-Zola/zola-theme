@@ -64,3 +64,5 @@
     src: url("../fonts/gustavo/Gustavo-Bold.otf") format("opentype");
     font-weight: 700;
 }
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
