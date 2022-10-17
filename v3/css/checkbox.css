@@ -1,0 +1,41 @@
+@import url("color.css");
+
+:root {
+  --checkbox-big: 16px;
+  --checkbox-small: 12px;
+  --checkbox-radius-round: 20px;
+  --checkbox-radius-square: 4px;
+}
+
+.checkbox-big {
+  width: var(--checkbox-big);
+  height: var(--checkbox-big);
+  border: 2px solid var(--primary)
+}
+
+.checkbox-small {
+  width: var(--checkbox-small);
+  height: var(--checkbox-small);
+  border: 1px solid var(--primary)
+}
+
+.checkbox-round-fill {
+  border-radius: var(--checkbox-radius-round);
+  background: var(--primary);
+}
+
+.checkbox-round {
+  border-radius: var(--checkbox-radius-round);
+  background: var(--xlight);
+  border-color: var(--primary);
+}
+
+.checkbox-square-fill {
+  border-radius: var(--checkbox-radius-square);
+  background: var(--primary);
+}
+
+.checkbox-square {
+  border-radius: var(--checkbox-radius-square);
+  background: var(--xlight);
+}
