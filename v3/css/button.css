@@ -8,6 +8,7 @@ button {
     font-size: 12px;
     line-height: 15px;
     padding: 13px;
+    cursor: pointer;
 }
 
 .primary {
@@ -17,5 +18,10 @@ button {
 
 .secondary{
     background-color: var(--xlight);
+    color: var(--xdark);
+}
+
+.tertiary {
+    background-color: transparent;
     color: var(--xdark);
 }
