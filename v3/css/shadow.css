@@ -1,0 +1,13 @@
+@import './color.css';
+
+.pShadowDark {
+  box-shadow: 4px 8px 28px 0px rgba(var(--primary), 0.15);
+}
+
+.pShadow {
+  box-shadow:  0px 8px 28px 0px rgba(var(--primary), 0.10);
+}
+
+.pShadowLight {
+  box-shadow: 0px 8px 16px 0px rgba(var(--primary), 0.05);
+}
