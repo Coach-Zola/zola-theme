@@ -60,3 +60,17 @@ textarea {
 img, .color {
     cursor: pointer;
 }
+
+.shadow-container {
+    border-radius: 50%;
+    border-color: black;
+    height: 84px;
+    width: 84px;
+    border: 1px solid black
+}
+.shadow-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 20%;
+}
