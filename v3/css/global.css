@@ -5,6 +5,7 @@
 @import url("text.css");
 @import url("multidropdown.css");
 @import url("shadow.css");
+@import url("checkbox.css");
 
 body {
     font-family: 'Montserrat', serif;
