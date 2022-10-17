@@ -1,6 +1,8 @@
 :root {
     --primary: #776BFF;
+    --primary-hover: #5243FF;
     --secondary: #DCEDFF;
+    --secondary-hover: #EAEAEA;
 
     --white: #FEFDFF;
     --black: #070214;

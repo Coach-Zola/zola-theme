@@ -168,20 +168,52 @@
         <h3>Shadows</h3>
         <div class="shadow-list">
           <div class="pShadowLight shadow-container">
+            <p>light</p>
           </div>
           <div class="pShadow shadow-container">
+            <p>shadow</p>
           </div>
           <div class="pShadowDark shadow-container">
+            <p>dark</p>
           </div>
         </div>
     </div>
     <div>
       <h3>Button</h3>
-      <div class="buttonList">
-          <button class="button primary">Label</button>
-          <button class="button secondary">Label</button>
-          <button class="button tertiary">Label</button>
+      <div style="display:flex; align-items: center;">
+        <div style="display: flex; gap: 12px; margin-bottom: 15px;">
+            <button class="button primary primary-big">Label</button>
+            <button class="button secondary secondary-big">Label</button>
+            <button class="button tertiary tertiary-big">Label</button>
         </div>
+        <div style="display: flex; gap: 12px; margin-bottom: 15px;">
+            <button class="button primary primary-medium">Label</button>
+            <button class="button secondary secondary-medium">Label</button>
+            <button class="button tertiary-medium">Label</button>
+        </div>
+        <div style="display: flex; gap: 12px; margin-bottom: 15px;">
+            <button class="button primary primary-small">Label</button>
+            <button class="button secondary secondary-small">Label</button>
+            <button class="button tertiary tertiary-small">Label</button>
+        </div>
+      </div>
+      <div style="display:flex; align-items: center;">
+        <div style="display: flex; gap: 12px; margin-bottom: 15px;">
+            <button class="button primary primary-big" disabled>Label</button>
+            <button class="button secondary secondary-big" disabled>Label</button>
+            <button class="button tertiary tertiary-big" disabled>Label</button>
+        </div>
+        <div style="display: flex; gap: 12px; margin-bottom: 15px;">
+            <button class="button primary primary-medium" disabled>Label</button>
+            <button class="button secondary secondary-medium" disabled>Label</button>
+            <button class="button tertiary-medium" disabled>Label</button>
+        </div>
+        <div style="display: flex; gap: 12px; margin-bottom: 15px;">
+            <button class="button primary primary-small" disabled>Label</button>
+            <button class="button secondary secondary-small" disabled>Label</button>
+            <button class="button tertiary tertiary-small" disabled>Label</button>
+        </div>
+      </div>
     </div>
     <script src="index.js"></script>
 </body>
