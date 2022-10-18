@@ -1,21 +1,75 @@
 @import url("color.css");
+@import url("font.css");
 
-button {
-    height: 40px;
+:root {
+    --button-padding-big: 12px 24px;
+    --button-padding-medium: 8px 16px;
+    --button-padding-small: 8px 12px;
+}
+
+.button {
     border-radius: 4px;
     border-color: rgba(255, 0, 0, 0);
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 15px;
-    padding: 13px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
 }
+
+
+/*-------------------PRIMARY-------------------*/
 
 .primary {
     background: var(--primary);
     color: var(--white);
 }
 
-.secondary{
-    background-color: var(--xlight);
+.primary:hover {
+    background: var(--primary-hover);
+}
+
+.primary:disabled {
+    background: var(--light);
+    border: 1px solid var(--dark);
     color: var(--xdark);
 }
+
+.btn-big {
+  padding: var(--button-padding-big);
+}
+.btn-medium {
+  padding: var(--button-padding-medium);
+}
+.btn-small {
+  padding: var(--button-padding-small);
+}
+
+  /*-------------------secondary-------------------*/
+
+
+  .secondary {
+    background-color: var(--xlight);
+    color: var(--xdark);
+  }
+
+  .secondary:hover {
+    background: var(--light);
+  }
+
+  .secondary:disabled {
+    background: var(--white);
+    border: 1px solid var(--grey);
+    color: var(--grey);
+  }
+
+  /*-------------------tertiary-------------------*/
+
+  .tertiary {
+    background-color: transparent;
+    color: var(--xdark);
+  }
+
+  .tertiary:disabled {
+    color: var(--grey);
+  }
