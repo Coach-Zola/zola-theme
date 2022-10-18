@@ -5,6 +5,12 @@
 @import url("text.css");
 @import url("multidropdown.css");
 @import url("shadow.css");
+@import url("checkbox.css");
+@import url("tags.css");
+@import url("infoCard.css");
+@import url("chips.css");
+@import url("title.css");
+@import url("onglet.css");
 
 body {
     font-family: 'Montserrat', serif;
