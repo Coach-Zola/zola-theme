@@ -8,6 +8,7 @@
 @import url("checkbox.css");
 @import url("tags.css");
 @import url("infoCard.css");
+@import url("chips.css");
 
 body {
     font-family: 'Montserrat', serif;

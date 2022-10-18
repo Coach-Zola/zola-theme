@@ -1,7 +1,6 @@
 @import url("color.css");
 
 .info-card {
-  width: 78px;
   display: flex;
   flex-direction: row;
   align-items: center;
