@@ -19,23 +19,18 @@
   border: 1px solid var(--primary)
 }
 
-.checkbox-round-fill {
-  border-radius: var(--checkbox-radius-round);
-  background: var(--primary);
-}
-
 .checkbox-round {
   border-radius: var(--checkbox-radius-round);
   background: var(--xlight);
   border-color: var(--primary);
 }
 
-.checkbox-square-fill {
-  border-radius: var(--checkbox-radius-square);
-  background: var(--primary);
-}
 
 .checkbox-square {
   border-radius: var(--checkbox-radius-square);
   background: var(--xlight);
+}
+
+.fill {
+  background: var(--primary);
 }
