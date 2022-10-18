@@ -9,6 +9,7 @@
 @import url("tags.css");
 @import url("infoCard.css");
 @import url("chips.css");
+@import url("title.css");
 
 body {
     font-family: 'Montserrat', serif;
