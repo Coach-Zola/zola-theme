@@ -26,7 +26,7 @@
 }
 
 .primary:hover {
-    background: var(--primary-hover);
+    background: var(--primary-contrast);
 }
 
 .primary:disabled {
@@ -54,7 +54,7 @@
   }
 
   .secondary:hover {
-    background: var(--light);
+    background: var(--secondary-contrast);
   }
 
   .secondary:disabled {
