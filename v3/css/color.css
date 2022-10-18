@@ -58,6 +58,10 @@
     color: var(--xlight);
 }
 
+.text-tag-red {
+    color: var(--tag-red);
+}
+
 /* BACKGROUND */
 .bg-black {
     background-color: var(--black);

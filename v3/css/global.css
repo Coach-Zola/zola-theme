@@ -11,6 +11,7 @@
 @import url("chips.css");
 @import url("title.css");
 @import url("onglet.css");
+@import url("callout.css");
 
 body {
     font-family: 'Montserrat', serif;
