@@ -17,4 +17,5 @@ body {
     font-family: 'Montserrat', serif;
     background: var(--white);
     color: var(--xdark);
+    margin: 16px;
 }
