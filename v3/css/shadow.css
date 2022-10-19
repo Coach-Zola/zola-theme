@@ -17,7 +17,7 @@
   --opacity-light: 0.05;
 
   --box-shadow-spread: 0;
-  --box-shadow-color: var(--primary);
+  --box-shadow-color: var(--primary)OD;
 }
 
 .pShadowDark {
@@ -26,8 +26,7 @@
     var(--box-shadow-offset-y-dark)
     var(--box-shadow-blur-dark)
     var(--box-shadow-spread)
-    var(--box-shadow-color);
-  opacity: var(--opacity-dark);
+    var(--primary-shodow-15);
 }
 
 .pShadow {
@@ -36,8 +35,7 @@
     var(--box-shadow-offset-y-shadow)
     var(--box-shadow-blur-shadow)
     var(--box-shadow-spread)
-    var(--box-shadow-color);
-  opacity: var(--opacity-shadow);
+    var(--primary-shodow-10);
 }
 
 .pShadowLight {
@@ -46,7 +44,6 @@
     var(--box-shadow-offset-y-light)
     var(--box-shadow-blur-light)
     var(--box-shadow-spread)
-    var(--box-shadow-color);
-  opacity: var(--opacity-light);
+    var(--primary-shodow-5);
   /* box-shadow: 0px 8px 16px 0px rgba(var(--primary), 0.05); */
 }
