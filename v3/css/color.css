@@ -32,6 +32,17 @@
     --bg-tag-blue: #DEF6FC;
     --bg-tag-purple: #F6F2FD;
     --bg-tag-green: #F1FFE0;
+
+    --infograph-g1: #3BABD1;
+    --infograph-g2: #776BFF;
+    --infograph-g3: #8AC926;
+    --infograph-g4: #AB987B;
+    --infograph-g5: #AFCBFF;
+    --infograph-g6: #B5F766;
+    --infograph-g7: #B974ED;
+    --infograph-g8: #FF595E;
+    --infograph-g9: #FF70A6;
+    --infograph-g10: #FFCD4E;
 }
 
 /* TEXT */
@@ -149,4 +160,37 @@
 /* Border */
 .brd1-black {
     border: solid 1px var(--black);
+}
+
+/* infographic */
+
+.infographic-g1 {
+    background-color: var(--infograph-g1);
+}
+.infographic-g2 {
+    background-color: var(--infograph-g2);
+}
+.infographic-g3 {
+    background-color: var(--infograph-g3);
+}
+.infographic-g4 {
+    background-color: var(--infograph-g4);
+}
+.infographic-g5 {
+    background-color: var(--infograph-g5);
+}
+.infographic-g6 {
+    background-color: var(--infograph-g6);
+}
+.infographic-g7 {
+    background-color: var(--infograph-g7);
+}
+.infographic-g8 {
+    background-color: var(--infograph-g8);
+}
+.infographic-g9 {
+    background-color: var(--infograph-g9);
+}
+.infographic-g10 {
+    background-color: var();
 }
