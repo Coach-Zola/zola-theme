@@ -1,0 +1,33 @@
+@import url("color.css");
+
+
+.callout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 225px;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.callout-error {
+  background-color: var(--bg-tag-red);
+  border: 1px solid var(--tag-red);
+}
+.callout-update {
+  background-color: var(--bg-tag-purple);
+  border: 1px solid var(--tag-purple);
+}
+.callout-lock {
+  background-color: var(--xlight);
+  border: 1px solid var(--dark);
+}
+.callout-success {
+  background-color: var(--bg-tag-green);
+  border: 1px solid var(--tag-green);
+}
+.callout-warning {
+  background-color: var(--bg-tag-yellow);
+  border: 1px solid var(--tag-yellow);
+}
