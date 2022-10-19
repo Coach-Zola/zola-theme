@@ -54,7 +54,7 @@
   }
 
   .secondary:hover {
-    background: var(--secondary-contrast);
+    background: var(--light);
   }
 
   .secondary:disabled {
