@@ -1,13 +1,52 @@
-@import './color.css';
+@import url('color.css');
+
+:root {
+  --box-shadow-offset-x-dark: 4px;
+  --box-shadow-offset-y-dark: 8px;
+  --box-shadow-blur-dark: 28px;
+  --opacity-dark: 0.15;
+
+  --box-shadow-offset-x-shadow: 0px;
+  --box-shadow-offset-y-shadow: 8px;
+  --box-shadow-blur-shadow: 28px;
+  --opacity-shadow: 0.10;
+
+  --box-shadow-offset-x-light: 0px;
+  --box-shadow-offset-y-light: 8px;
+  --box-shadow-blur-light: 16px;
+  --opacity-light: 0.05;
+
+  --box-shadow-spread: 0;
+  --box-shadow-color: var(--primary);
+}
 
 .pShadowDark {
-  box-shadow: 4px 8px 28px 0px rgba(var(--primary), 0.15);
+  box-shadow:
+    var(--box-shadow-offset-x-dark)
+    var(--box-shadow-offset-y-dark)
+    var(--box-shadow-blur-dark)
+    var(--box-shadow-spread)
+    var(--box-shadow-color);
+  opacity: var(--opacity-dark);
 }
 
 .pShadow {
-  box-shadow:  0px 8px 28px 0px rgba(var(--primary), 0.10);
+  box-shadow:
+    var(--box-shadow-offset-x-shadow)
+    var(--box-shadow-offset-y-shadow)
+    var(--box-shadow-blur-shadow)
+    var(--box-shadow-spread)
+    var(--box-shadow-color);
+  opacity: var(--opacity-shadow);
 }
 
 .pShadowLight {
-  box-shadow: 0px 8px 16px 0px rgba(var(--primary), 0.05);
+  box-shadow:
+    var(--box-shadow-offset-x-light)
+    var(--box-shadow-offset-y-light)
+    var(--box-shadow-blur-light)
+    var(--box-shadow-spread)
+    var(--box-shadow-color);
+  opacity: var(--opacity-light);
+  /* box-shadow: 0px 8px 16px 0px rgba(var(--primary), 0.05); */
 }
