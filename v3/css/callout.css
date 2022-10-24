@@ -4,11 +4,13 @@
 .callout {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  flex-direction: column;
   width: 225px;
   gap: 8px;
   padding: 12px;
   border-radius: 10px;
+  position: relative;
 }
 
 .callout-error {
