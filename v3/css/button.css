@@ -20,6 +20,7 @@
   align-items: center;
   gap: 8px;
   line-height: 16px;
+  width: fit-content;
 }
 
 
