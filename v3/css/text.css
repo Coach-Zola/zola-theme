@@ -43,6 +43,15 @@ h4, .h5 {
   font-family: 'Montserrat';
 }
 
+h5, .h6 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 8px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat';
+}
+
 .large {
   font-style: normal;
   font-weight: 700;
