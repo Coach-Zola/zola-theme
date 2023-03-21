@@ -17,6 +17,10 @@ h3 {
     margin-bottom: 8px;
 }
 
+p {
+    margin: 0;
+}
+
 #icons {
     max-width: 800px;
 }
