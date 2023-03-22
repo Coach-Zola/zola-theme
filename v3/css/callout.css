@@ -33,3 +33,11 @@
   background-color: var(--bg-tag-yellow);
   border: 1px solid var(--tag-yellow);
 }
+
+.callout-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  padding: 0px 12px 0px 28px;
+}
