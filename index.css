@@ -80,3 +80,6 @@ img, .color {
     align-items: center;
     justify-content: space-around;
 }
+.callout {
+    width: 225px;
+}
