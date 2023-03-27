@@ -6,8 +6,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 225px;
   gap: 8px;
+  width: fit-content;
   padding: 12px;
   border-radius: 10px;
   position: relative;
@@ -32,4 +32,18 @@
 .callout-warning {
   background-color: var(--bg-tag-yellow);
   border: 1px solid var(--tag-yellow);
+}
+
+.callout-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  padding: 0px 12px 0px 28px;
+}
+
+.callout-image {
+  position: absolute;
+  top: 13px;
+  left: 13px;
 }

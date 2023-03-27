@@ -80,11 +80,6 @@ img, .color {
     align-items: center;
     justify-content: space-around;
 }
-
-.callout-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-    padding: 0px 12px 0px 28px;
+.callout {
+    width: 225px;
 }
