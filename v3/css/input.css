@@ -64,7 +64,7 @@ option, .multioption{
 }
 
 textarea {
-    padding: 11px 12px;
+    padding: 8px 12px;
     resize: none;
     min-height: 16px;
     max-height: none;
