@@ -44,6 +44,9 @@
 
 .btn-big {
   padding: var(--button-padding-big);
+  max-height: 40px;
+  min-height: 40px;
+  height: 40px;
 }
 .btn-medium {
   padding: var(--button-padding-medium);
