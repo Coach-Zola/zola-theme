@@ -51,3 +51,8 @@
   width: 16px;
   height: 16px;
 }
+
+.callout-full-width {
+  width: auto;
+  align-items: flex-start;
+}
