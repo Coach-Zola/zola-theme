@@ -70,3 +70,8 @@ textarea {
     max-height: none;
     height: 100%;
 }
+
+select {
+    text-overflow: ellipsis;
+    padding: 4px 16px 4px 8px !important;
+}
