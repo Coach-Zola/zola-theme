@@ -13,7 +13,9 @@ input, textarea, select {
     padding: 4px 12px;
     border: solid 1px var(--xlight);
     border-radius: 4px;
+}
 
+input {
     outline: none !important;
 }
 
