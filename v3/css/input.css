@@ -15,7 +15,7 @@ input, textarea, select {
     border-radius: 4px;
 }
 
-input {
+input, textarea, select {
     outline: none !important;
 }
 
@@ -76,8 +76,4 @@ textarea {
 select {
     text-overflow: ellipsis;
     padding: 4px 24px 4px 8px !important;
-}
-
-input:focus-visible, textarea:focus-visible, select:focus-visible {
-    outline: none;
 }
