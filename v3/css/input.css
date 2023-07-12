@@ -1,6 +1,10 @@
 @import url("color.css");
 @import url("font.css");
 
+* {
+    white-space: pre-line;
+}
+
 input, textarea, select {
     font-family: 'Montserrat', serif;
     font-weight: 600;
