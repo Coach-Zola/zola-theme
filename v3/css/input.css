@@ -1,10 +1,6 @@
 @import url("color.css");
 @import url("font.css");
 
-* {
-    white-space: pre-line;
-}
-
 input, textarea, select {
     font-family: 'Montserrat', serif;
     font-weight: 600;
@@ -84,4 +80,8 @@ textarea {
 select {
     text-overflow: ellipsis;
     padding: 4px 24px 4px 8px !important;
+}
+
+p, span, a, div {
+    white-space: pre-line;
 }
