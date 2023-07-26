@@ -49,6 +49,8 @@
     --primary-shadow-5: #776BFF0D;
     --primary-shadow-10: #776BFF1A;
     --primary-shadow-15: #776BFF26;
+
+    --overlay-popup: rgba(0,0,0,0.7);
 }
 
 /* TEXT */
