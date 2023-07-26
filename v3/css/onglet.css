@@ -13,7 +13,8 @@
 }
 
 .onglet-not-selected:hover {
-  gap: 4px;
+  transform: translateY(-3px);
+  transition: transform 0.2s ease-in-out;
 }
 
 .onglet-selected {
