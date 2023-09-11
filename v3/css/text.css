@@ -59,6 +59,13 @@ h5, .h6 {
   font-family: 'Montserrat';
 }
 
+.medium-large {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+}
+
 .medium {
   font-family: 'Montserrat';
   font-style: normal;
