@@ -108,6 +108,20 @@ h5, .h6 {
   font-family: 'Montserrat';
 }
 
+.medium-400 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: 'Montserrat';
+}
+
+.small-400 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  font-family: 'Montserrat';
+}
+
 .clickable {
   cursor: pointer;
 }
