@@ -92,6 +92,14 @@
     color: var(--danger);
 }
 
+.text-warn {
+    color: var(--warn);
+}
+
+.text-alternative {
+    color: var(--alernative);
+}
+
 /* BACKGROUND */
 .bg-black {
     background-color: var(--black);
