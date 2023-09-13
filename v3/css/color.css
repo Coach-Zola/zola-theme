@@ -88,6 +88,10 @@
     color: var(--success);
 }
 
+.text-danger {
+    color: var(--danger);
+}
+
 /* BACKGROUND */
 .bg-black {
     background-color: var(--black);
