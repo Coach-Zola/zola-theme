@@ -108,19 +108,111 @@ h5, .h6 {
   font-family: 'Montserrat';
 }
 
-.medium-400 {
+.t-32x700 {
   font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
+  font-weight: 700;
+  font-size: 32px;
+  margin: 0;
+  padding: 0;
   font-family: 'Montserrat';
 }
 
-.small-400 {
+.t-24x700 {
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat';
+}
+
+.t-16x700 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat';
+}
+
+.t-12x700 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat';
+}
+
+.t-10x700 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat';
+}
+
+.t-8x700 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 8px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat';
+}
+
+.t-12x700 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat';
+}
+
+.t-20x600 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.t-12x600 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.t-10x600 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+}
+
+.t-16x500 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: 'Montserrat';
+}
+
+.t-12x500 {
+  font-style: normal;
+  font-weight: 500;
   font-size: 12px;
   font-family: 'Montserrat';
 }
+
+.t-10x500 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  font-family: 'Montserrat';
+}
+
 
 .clickable {
   cursor: pointer;
