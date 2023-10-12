@@ -1,0 +1,17 @@
+.extendable-col-size-SMALL {
+  min-width: 80px;
+  max-width: 160px;
+  width: 100%;
+}
+
+.extendable-col-size-MEDIUM {
+  max-width: 320px;
+  min-width: 160px;
+  width: 100%;
+}
+
+.extendable-col-size-LARGE {
+  min-width: 240px;
+  max-width: 480px;
+  width: 100%;
+}
