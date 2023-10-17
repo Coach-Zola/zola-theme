@@ -1,17 +1,17 @@
 .extendable-col-size-0 {
   min-width: 80px;
-  max-width: 80px;
+  max-width: 160px;
   width: 100%;
 }
 
 .extendable-col-size-1 {
-  max-width: 160px;
   min-width: 160px;
+  max-width: 320px;
   width: 100%;
 }
 
 .extendable-col-size-2 {
   min-width: 240px;
-  max-width: 240px;
+  max-width: 480px;
   width: 100%;
 }
