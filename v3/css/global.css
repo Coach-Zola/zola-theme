@@ -14,6 +14,7 @@
 @import url("onglet.css");
 @import url("callout.css");
 @import url("extendable-col-size.css");
+@import url("loader.css");
 
 body {
     font-family: 'Montserrat', serif;
