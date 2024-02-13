@@ -1,8 +1,8 @@
 #zola-logo-spin {
-    animation-name: zolaspin;
-    animation-duration: 2.5s;
-    animation-iteration-count: infinite;
     transform-origin: 50% 50%;
+    animation: zolaspin 2.5s infinite;
+    -webkit-animation: zolaspin 2.5s infinite;
+    -moz-animation: zolaspin 2.5s infinite;
 }
 
 @keyframes zolaspin {
@@ -11,5 +11,25 @@
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+
+/* MOZILLA */
+@-moz-keyframes zolaspin {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+    } 
+}
+
+/* WEBKIT */
+@-webkit-keyframes zolaspin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
     }
 }
