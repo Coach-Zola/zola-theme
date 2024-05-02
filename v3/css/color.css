@@ -35,6 +35,25 @@
     --bg-tag-purple: #F6F2FD;
     --bg-tag-green: #F1FFE0;
 
+    --bg-tag-alernative: rgba(88, 219, 203, 0.1);
+    --bg-tag-warn: rgba(255, 147, 30, 0.1);
+    --bg-tag-success: rgba(34, 181, 115, 0.1);
+    --bg-tag-danger: rgba(237, 28, 36, 0.1);
+    --bg-tag-g1: rgba(59, 171, 209, 1);
+    --bg-tag-g2: rgba(119, 107, 255, 0.1);
+    --bg-tag-g3: rgba(175, 203, 255, 1);
+    --bg-tag-g4: rgba(171, 152, 123, 1);
+    --bg-tag-g5: rgba(175, 203, 255, 1);
+    --bg-tag-g6: rgba(181, 246, 102, 1);
+    --bg-tag-g7: rgba(185, 116, 237, 0.1);
+    --bg-tag-g9: rgba(175, 203, 255, 1);
+    --bg-tag-g8: rgba(255, 89, 94, 1);
+    --bg-tag-g10: rgba(255, 205, 78, 1);
+    --bg-tag-g11: rgba(110, 132, 212, 0.1);
+
+
+
+
     --infograph-g1: #3BABD1;
     --infograph-g2: #776BFF;
     --infograph-g3: #8AC926;
@@ -53,6 +72,7 @@
     --primary-shadow-15: #776BFF26;
 
     --overlay-popup: rgba(0,0,0,0.7);
+
 }
 
 /* TEXT */
