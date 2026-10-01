@@ -1,0 +1,134 @@
+name: Add PR to project
+
+# Adds a newly opened PR to the org GitHub Project.
+# Sets Status to "In Review" when a review is requested.
+# Other status / close handling belongs in the project's built-in workflows.
+#
+# Org variable:
+#   GH_PROJECT_ID    — project number from the URL (orgs/Coach-Zola/projects/N)
+#                      or the GraphQL node id (PVT_kwDO…)
+# Org secret:
+#   GH_PROJECT_TOKEN — fine-grained PAT
+#                      Repository: Metadata (read), Pull requests (read)
+#                      Organization: Projects (read and write)
+#
+# The project Status field must include an option named "In Review".
+
+on:
+  pull_request:
+    types: [opened, review_requested]
+
+jobs:
+  add-to-project:
+    name: Sync PR to org project
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+    steps:
+      - name: Add PR to the org project
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # original: v9
+        env:
+          GH_PROJECT_ID: ${{ vars.GH_PROJECT_ID }}
+          GH_PROJECT_TOKEN: ${{ secrets.GH_PROJECT_TOKEN }}
+        with:
+          github-token: ${{ secrets.GH_PROJECT_TOKEN || github.token }}
+          script: |
+            const projectRef = process.env.GH_PROJECT_ID;
+            const token = process.env.GH_PROJECT_TOKEN;
+            const pr = context.payload.pull_request;
+            const action = context.payload.action;
+
+            if (!projectRef || !token) {
+              console.log('Skipping: GH_PROJECT_ID or GH_PROJECT_TOKEN is not available to this repository.');
+              return;
+            }
+
+            if (!pr || !pr.node_id) {
+              console.log('No pull request in the event payload.');
+              return;
+            }
+
+            try {
+              let projectId = projectRef;
+              if (/^\d+$/.test(projectRef)) {
+                const resolved = await github.graphql(
+                  `query($login: String!, $number: Int!) {
+                    organization(login: $login) {
+                      projectV2(number: $number) { id }
+                    }
+                  }`,
+                  { login: context.repo.owner, number: Number(projectRef) }
+                );
+                projectId = resolved.organization && resolved.organization.projectV2
+                  ? resolved.organization.projectV2.id
+                  : null;
+                if (!projectId) {
+                  core.setFailed(`Could not resolve organization project number ${projectRef}.`);
+                  return;
+                }
+              }
+
+              const added = await github.graphql(
+                `mutation($projectId: ID!, $contentId: ID!) {
+                  addProjectV2ItemById(input: { projectId: $projectId, contentId: $contentId }) {
+                    item { id }
+                  }
+                }`,
+                { projectId, contentId: pr.node_id }
+              );
+              const itemId = added.addProjectV2ItemById.item.id;
+              console.log(`PR #${pr.number} is on the project.`);
+
+              if (action !== 'review_requested') {
+                return;
+              }
+
+              const fieldQuery = await github.graphql(
+                `query($projectId: ID!, $fieldName: String!) {
+                  node(id: $projectId) {
+                    ... on ProjectV2 {
+                      field(name: $fieldName) {
+                        ... on ProjectV2SingleSelectField {
+                          id
+                          options { id name }
+                        }
+                      }
+                    }
+                  }
+                }`,
+                { projectId, fieldName: 'Status' }
+              );
+              const statusField = fieldQuery.node && fieldQuery.node.field;
+              if (!statusField || !statusField.id || !statusField.options) {
+                core.setFailed('Project is missing a single-select field named "Status".');
+                return;
+              }
+
+              const option = statusField.options.find((candidate) =>
+                (candidate.name || '').trim().toLowerCase() === 'in review'
+              );
+              if (!option) {
+                const available = statusField.options.map((candidate) => candidate.name).join(', ');
+                core.setFailed(`Status option "In Review" not found. Available: ${available}`);
+                return;
+              }
+
+              await github.graphql(
+                `mutation($projectId: ID!, $itemId: ID!, $fieldId: ID!, $optionId: String!) {
+                  updateProjectV2ItemFieldValue(input: {
+                    projectId: $projectId
+                    itemId: $itemId
+                    fieldId: $fieldId
+                    value: { singleSelectOptionId: $optionId }
+                  }) {
+                    projectV2Item { id }
+                  }
+                }`,
+                { projectId, itemId, fieldId: statusField.id, optionId: option.id }
+              );
+
+              console.log(`Set PR #${pr.number} status to "In Review".`);
+            } catch (error) {
+              core.setFailed(error.message || String(error));
+            }
