@@ -69,16 +69,49 @@ jobs:
                 }
               }
 
-              const added = await github.graphql(
-                `mutation($projectId: ID!, $contentId: ID!) {
-                  addProjectV2ItemById(input: { projectId: $projectId, contentId: $contentId }) {
-                    item { id }
-                  }
-                }`,
-                { projectId, contentId: pr.node_id }
-              );
-              const itemId = added.addProjectV2ItemById.item.id;
-              console.log(`PR #${pr.number} is on the project.`);
+              let itemId;
+              try {
+                const added = await github.graphql(
+                  `mutation($projectId: ID!, $contentId: ID!) {
+                    addProjectV2ItemById(input: { projectId: $projectId, contentId: $contentId }) {
+                      item { id }
+                    }
+                  }`,
+                  { projectId, contentId: pr.node_id }
+                );
+                itemId = added.addProjectV2ItemById.item.id;
+                console.log(`PR #${pr.number} is on the project.`);
+              } catch (addError) {
+                const addMessage = addError.message || String(addError);
+                if (!/already exists/i.test(addMessage)) {
+                  throw addError;
+                }
+                const existing = await github.graphql(
+                  `query($contentId: ID!) {
+                    node(id: $contentId) {
+                      ... on PullRequest {
+                        projectItems(first: 50) {
+                          nodes {
+                            id
+                            project { id }
+                          }
+                        }
+                      }
+                    }
+                  }`,
+                  { contentId: pr.node_id }
+                );
+                const items = existing.node && existing.node.projectItems
+                  ? existing.node.projectItems.nodes
+                  : [];
+                const match = items.find((item) => item.project && item.project.id === projectId);
+                if (!match) {
+                  core.setFailed(`PR #${pr.number} is already on a project, but no item matched ${projectId}.`);
+                  return;
+                }
+                itemId = match.id;
+                console.log(`PR #${pr.number} was already on the project.`);
+              }
 
               if (action !== 'review_requested') {
                 return;
